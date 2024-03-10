@@ -1,0 +1,28 @@
+name: Deploy Apigee Proxy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-proxy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v0.3.0
+
+    - name: Deploy Apigee Proxy
+      run: |
+        # Replace with your Apigee details
+        ORG_NAME="caramel-limiter-412805"
+        API_NAME="hello-world"
+        REVISION_NUMBER="2"  # Replace with the correct revision number
+
+        # Deploy Apigee proxy to the "eval" environment using curl
+        curl -X POST \
+          "https://apigee.googleapis.com/v1/organizations/$ORG_NAME/environments/eval/apis/$API_NAME/revisions/$REVISION_NUMBER/deployments?override=true"
