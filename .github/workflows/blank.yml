@@ -20,7 +20,7 @@ jobs:
       run: |
         # Replace with your Apigee details
         ORG_NAME="caramel-limiter-412805"
-        API_NAME="hello-world"
+        API_NAME="krithika-demo-proxy"
         REVISION_NUMBER="2"  # Replace with the correct revision number
 
         # Deploy Apigee proxy to the "eval" environment using curl
