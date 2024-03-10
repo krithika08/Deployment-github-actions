@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="krithika-demo-proxy">
+  <DisplayName/>
+  <Description/>
+  <CreatedAt>1710038857967</CreatedAt>
+  <LastModifiedAt>1710038857967</LastModifiedAt>
+  <BasePaths>/krithika-demo-proxy</BasePaths>
+  <ProxyEndpoints>
+    <ProxyEndpoint>default</ProxyEndpoint>
+  </ProxyEndpoints>
+  <TargetEndpoints>
+    <TargetEndpoint>default</TargetEndpoint>
+  </TargetEndpoints>
+</APIProxy>
