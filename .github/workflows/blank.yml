@@ -18,7 +18,7 @@ jobs:
 
     - name: Export Apigee Proxy
       run: |
-        http GET "https://api.ENTERPRISES.apigee.com/v1/organizations/caramel-limiter-412805/apis/krithika-demo-proxy/revisions/1?format=bundle" \
+        http GET "https://apigee.google.com/platform/caramel-limiter-412805/proxies/krithika-demo-proxy/revisions/1?format=bundle" \
           --download -o exported-proxy.zip \
           --verify=no
 
