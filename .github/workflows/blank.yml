@@ -19,7 +19,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/blank.yaml'
+      - '.github/workflows/blank.yml'
       - 'src/**'
 
 jobs:
