@@ -18,17 +18,7 @@ jobs:
 
     - name: Export Apigee Proxy
       run: |
-        http GET "https://apigee.google.com/platform/caramel-limiter-412805/proxies/krithika-demo-proxy/revisions/1?format=bundle" \
+        http GET "https://apigee.google.com/platform/zebra-nonprod/proxies/Savanna-API-Apigee-FinOps/revisions/1?format=bundle" \
           --download -o exported-proxy.zip \
           --verify=no
 
-    - name: Archive Exported Proxy
-      uses: actions/upload-artifact@v2
-      with:
-        name: exported-proxy
-        path: exported-proxy.zip
-
-    - name: Deploy Apigee Proxy to Eval Environment
-      run: |
-        http --verbose POST "https://apigee.google.com/platform/caramel-limiter-412805/proxies/krithika-demo-proxy/revisions/1/deployments?action=deploy&env=eval" \
-        --verify=no
